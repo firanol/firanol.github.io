@@ -9,27 +9,45 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #f4f4f4;
         }
         .container {
-            text-align: center;
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h1, h2 {
             color: #333;
         }
-        p {
+        p, ul {
             color: #666;
         }
         a {
             color: #007bff;
             text-decoration: none;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .collapsible {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
@@ -38,6 +56,57 @@
         <h1>Welcome to My Web Page</h1>
         <p>Hi, I'm Firanol Abdisa. Welcome to my personal website.</p>
         <p>Check out my <a href="https://www.linkedin.com/in/firanol-abdisa-ie/" target="_blank">LinkedIn</a> profile.</p>
+
+        <div class="section">
+            <button class="collapsible">Education</button>
+            <div class="content">
+                <ul>
+                    <li>Master's in Business Analytics and Big Data, [University Name]</li>
+                    <li>Bachelor's in [Your Field], [University Name]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button class="collapsible">Experience</button>
+            <div class="content">
+                <ul>
+                    <li>Data Analyst at [Company Name], [Year] - Present</li>
+                    <li>Business Analyst at [Company Name], [Year] - [Year]</li>
+                    <li>[Other Relevant Experience]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button class="collapsible">Skills</button>
+            <div class="content">
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Data Analysis</li>
+                    <li>Machine Learning</li>
+                    <li>[Other Skills]</li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
