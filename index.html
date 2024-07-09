@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firanol Abdisa's Web Page</title>
+    <title>Firanol Abdisa - Data Analyst</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,12 +49,46 @@
             overflow: hidden;
             background-color: #f9f9f9;
         }
+        .projects {
+            list-style: none;
+            padding: 0;
+        }
+        .projects li {
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Web Page</h1>
-        <p>Hi, I'm Firanol Abdisa. Welcome to my personal website.</p>
+        <p>Hi, I'm Firanol Abdisa. I'm a Data Analyst with a passion for extracting insights from data and driving business decisions.</p>
         <p>Check out my <a href="https://www.linkedin.com/in/firanol-abdisa-ie/" target="_blank">LinkedIn</a> profile.</p>
 
         <div class="section">
@@ -90,6 +124,33 @@
                 </ul>
             </div>
         </div>
+
+        <div class="section">
+            <button class="collapsible">Projects</button>
+            <div class="content">
+                <ul class="projects">
+                    <li><a href="[Project URL]" target="_blank">Project 1: [Project Title]</a> - Brief description of the project.</li>
+                    <li><a href="[Project URL]" target="_blank">Project 2: [Project Title]</a> - Brief description of the project.</li>
+                    <li><a href="[Project URL]" target="_blank">Project 3: [Project Title]</a> - Brief description of the project.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/firanol-abdisa-ie/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-username" target="_blank">GitHub</a>
+            <a href="https://twitter.com/your-username" target="_blank">Twitter</a>
+        </div>
     </div>
 
     <script>
@@ -107,6 +168,12 @@
                 }
             });
         }
+
+        // Contact form submission (requires backend setup)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! (Note: Form submission handling needs to be implemented)');
+        });
     </script>
 </body>
 </html>
